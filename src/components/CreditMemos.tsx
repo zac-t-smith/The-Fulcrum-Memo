@@ -11,7 +11,7 @@ const memos = [
     date: "Oct 2025",
     description: "Deep dive into Kirkland Lake Gold's distressed financing, examining how rescue capital can transform into predatory terms. Analysis covers the fulcrum security, capital structure priorities, and creditor dynamics in stressed situations.",
     tags: ["Distressed Debt", "Mining", "Fulcrum Security"],
-    file: "/kirkland-memo.html"
+    file: `${import.meta.env.BASE_URL}kirkland-memo.html`
   },
   {
     title: "The Second Restructuring",
@@ -19,7 +19,7 @@ const memos = [
     date: "Oct 2025",
     description: "Comprehensive analysis of Lycra's repeat restructuring, exploring why initial solutions failed and examining the challenges of sustained operational turnarounds in specialty materials. Includes detailed covenant analysis and recovery scenarios.",
     tags: ["Restructuring", "Chemicals", "Repeat Distress"],
-    file: "/lycra-memo.html"
+    file: `${import.meta.env.BASE_URL}lycra-memo.html`
   },
   {
     title: "Party City: Post-Mortem Analysis",
@@ -27,7 +27,7 @@ const memos = [
     date: "Oct 2025",
     description: "Post-mortem examination of Party City's liquidation, analyzing the intersection of secular retail decline, overleveraged balance sheets, and COVID-accelerated changes in consumer behavior. Recovery analysis across the capital structure.",
     tags: ["Retail", "Liquidation", "Post-Mortem"],
-    file: "/partycity-memo.html"
+    file: `${import.meta.env.BASE_URL}partycity-memo.html`
   }
 ];
 
