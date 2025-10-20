@@ -15,7 +15,7 @@ const About = () => {
           </p>
 
           <p className="text-lg leading-relaxed mb-6 text-justify">
-            When I transitioned out, I started studying finance but family circumstances required us to move to Mobile, Alabama. With one young child and being at a non-target, I leveraged my veteran network to get my foot in the door with investment banking, private equity, and wealth management internships. However, <b></b>in 2020, my junior year, COVID-19 froze the internship and analyst hiring pipelines. With much uncertainty and two small children, I decided to pivot and take a full-time strategic sales role to provide immediate stability for my family.</b>
+            When I transitioned out, I started studying finance but family circumstances required us to move to Mobile, Alabama. With one young child and being at a non-target, I leveraged my veteran network to get my foot in the door with investment banking, private equity, and wealth management internships. However, <b>in 2020, my junior year, COVID-19 froze the internship and analyst hiring pipelines. With much uncertainty and two small children, I decided to pivot and take a full-time strategic sales role to provide immediate stability for my family.</b>
           </p>
 
           <div className="bg-blue-50 dark:bg-blue-950/20 border-l-4 border-accent p-6 my-8">
