@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Editorial Red - signature color */
+    --primary: 358 88% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Navy for contrast */
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Subtle blue accent */
+    --accent: 210 70% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 358 88% 47%;
+
+    --radius: 0.5rem;
+
+    /* Custom editorial colors */
+    --editorial-cream: 40 20% 97%;
+    --highlight-yellow: 48 100% 88%;
+    --highlight-blue: 210 100% 95%;
+  }
+
+  .dark {
+    --background: 220 40% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 40% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 40% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 358 88% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 210 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 358 88% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', sans-serif;
+  }
+}
