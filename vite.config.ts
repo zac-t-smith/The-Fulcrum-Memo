@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // CRITICAL FIX: The 'base' property tells Vite to prefix all asset paths
+  // with the repository name when building for GitHub Pages.
+  base: "/The-Fulcrum-Memo/",
   server: {
     host: "::",
     port: 8080,
