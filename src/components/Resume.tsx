@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Briefcase, GraduationCap } from "lucide-react";
 
 const Resume = () => {
-  const experience = [
-  [
+  const experience = 
     {
       "title": "Managing Director & Partner",
       "company": "Best Option Restoration",
@@ -95,7 +94,6 @@ const Resume = () => {
         "Demonstrated immediate leadership and critical judgment by assuming the role of Shift Lead after relieving a derelict supervisor, ensuring continuous mission integrity."
       ]
     }
-  ];
 
   return (
     <section id="resume" className="py-24 bg-muted/30">
