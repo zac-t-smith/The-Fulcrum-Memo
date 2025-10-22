@@ -96,6 +96,24 @@ const Resume = () => {
     }
   ];
 
+const technicalSkills = [
+    "LBO Modeling", 
+    "DCF", 
+    "13-week Cash Flow", 
+    "Valuation (Comps, Precedents)", 
+    "Credit & Restructuring", 
+    "Excel"
+  ];
+  
+  // Logic for the download button:
+  const RESUME_FILE_PATH = "/Zachary_Smith_Resume.pdf"; // Updated path based on common React setups
+  
+  const handleDownload = () => {
+    // Best practice is often to use an <a> tag instead of a button with a complex onClick for downloads, 
+    // but the window.open() method is also valid if the path is correct.
+    window.open(RESUME_FILE_PATH, '_blank');
+  };
+
   return (
     <section id="resume" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6 max-w-6xl">
@@ -139,14 +157,14 @@ const Resume = () => {
                 <h3 className="text-xl font-bold">Education</h3>
               </div>
               <p className="font-semibold mb-2">University of Mobile</p>
-              <p className="text-sm text-muted-foreground mb-1">BSc in Business Administration</p>
+              <p className="text-sm text-muted-foreground mb-1">B.S. Business Administration</p>
               <p className="text-sm text-muted-foreground mb-1">Major: Finance</p>
-              <p className="text-sm text-primary font-semibold mb-6">GPA: 3.71/4.0 | Dec 2026</p>
+              <p className="text-sm text-primary font-semibold mb-6">GPA: 3.71/4.0 | Expected Dec 2026</p>
 
               <div className="border-t pt-6 mb-6">
                 <h4 className="font-semibold mb-3 text-sm uppercase tracking-wide">Technical Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  {["LBO Modeling", "DCF", "Valuation", "Credit Analysis", "Excel", "Trading Comps"].map((skill, index) => (
+                  {technicalSkills.map((skill, index) => (
                     <span key={index} className="text-xs px-3 py-1 bg-muted text-foreground rounded-full border border-border">
                       {skill}
                     </span>
@@ -154,13 +172,26 @@ const Resume = () => {
                 </div>
               </div>
 
+              {/* Download Button FIX */}
+              <a 
+                href={RESUME_FILE_PATH} 
+                download="Zachary_Smith_Resume.pdf" // This attribute tells the browser to download the file
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center w-full h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-md text-sm transition-colors"
+              >
+                <Download className="mr-2 w-4 h-4" />
+                Download Resume
+              </a>
+              {/* NOTE: If you must use the Button component as before, use the handleDownload function:
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                onClick={() => window.open('/Zachary Smith Resume.pdf', '_blank')}
+                onClick={handleDownload}
               >
                 <Download className="mr-2 w-4 h-4" />
                 Download Resume
               </Button>
+              */}
             </div>
           </div>
         </div>
