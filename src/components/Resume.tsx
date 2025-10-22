@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Download, Briefcase, GraduationCap } from "lucide-react";
+import ResumePDF from "./Zachary_Smith_Resume.pdf";
 
 const Resume = () => {
   const experience = [
@@ -104,19 +105,11 @@ const technicalSkills = [
     "Credit & Restructuring", 
     "Excel"
   ];
-  
-  // Logic for the download button:
-  const RESUME_FILE_PATH = "/Zachary_Smith_Resume.pdf"; // Updated path based on common React setups
-  
-  const handleDownload = () => {
-    // Best practice is often to use an <a> tag instead of a button with a complex onClick for downloads, 
-    // but the window.open() method is also valid if the path is correct.
-    window.open(RESUME_FILE_PATH, '_blank');
-  };
 
   return (
     <section id="resume" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6 max-w-6xl">
+        {/* ... (Header and Experience Rendering remains the same) ... */}
         <div className="border-b-2 border-primary pb-4 mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">Experience</h2>
           <p className="text-sm tracking-widest text-muted-foreground uppercase mt-2">
@@ -172,10 +165,11 @@ const technicalSkills = [
                 </div>
               </div>
 
-              {/* Download Button FIX */}
+              {/* DOWNLOAD BUTTON FIX: Using the imported ResumePDF variable */}
               <a 
-                href={RESUME_FILE_PATH} 
-                download="Zachary_Smith_Resume.pdf" // This attribute tells the browser to download the file
+                // 2. USE THE IMPORTED VARIABLE HERE
+                href={ResumePDF} 
+                download="Zachary_Smith_Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="inline-flex items-center justify-center w-full h-10 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-md text-sm transition-colors"
@@ -183,15 +177,6 @@ const technicalSkills = [
                 <Download className="mr-2 w-4 h-4" />
                 Download Resume
               </a>
-              {/* NOTE: If you must use the Button component as before, use the handleDownload function:
-              <Button 
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                onClick={handleDownload}
-              >
-                <Download className="mr-2 w-4 h-4" />
-                Download Resume
-              </Button>
-              */}
             </div>
           </div>
         </div>
