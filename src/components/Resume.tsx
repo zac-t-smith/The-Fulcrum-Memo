@@ -156,7 +156,7 @@ const Resume = () => {
 
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-                onClick={() => window.open('/Zachary_Smith_Resume.pdf', '_blank')}
+                onClick={() => window.open('/Zachary Smith Resume.pdf', '_blank')}
               >
                 <Download className="mr-2 w-4 h-4" />
                 Download Resume
